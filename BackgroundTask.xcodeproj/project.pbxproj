@@ -14,7 +14,35 @@
 		5BC607F71D7146AC00D5C97A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC607F51D7146AC00D5C97A /* Main.storyboard */; };
 		5BC607F91D7146AC00D5C97A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC607F81D7146AC00D5C97A /* Assets.xcassets */; };
 		5BC607FC1D7146AC00D5C97A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC607FA1D7146AC00D5C97A /* LaunchScreen.storyboard */; };
+		ED069D50267CBBBB00C4C3EF /* SwiftAudioProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = ED069D4E267CBBBB00C4C3EF /* SwiftAudioProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED069D53267CBBBB00C4C3EF /* SwiftAudioProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED069D4C267CBBBB00C4C3EF /* SwiftAudioProxy.framework */; };
+		ED069D54267CBBBB00C4C3EF /* SwiftAudioProxy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED069D4C267CBBBB00C4C3EF /* SwiftAudioProxy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED069D5A267CBC0000C4C3EF /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED069D59267CBC0000C4C3EF /* BackgroundTask.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED069D51267CBBBB00C4C3EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BC607E61D7146AC00D5C97A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED069D4B267CBBBB00C4C3EF;
+			remoteInfo = SwiftAudioProxy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ED069D55267CBBBB00C4C3EF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ED069D54267CBBBB00C4C3EF /* SwiftAudioProxy.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5B7F21651D71963A00D0A65D /* blank.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blank.wav; sourceTree = "<group>"; };
@@ -26,10 +54,22 @@
 		5BC607F81D7146AC00D5C97A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BC607FB1D7146AC00D5C97A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BC607FD1D7146AC00D5C97A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED069D4C267CBBBB00C4C3EF /* SwiftAudioProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftAudioProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED069D4E267CBBBB00C4C3EF /* SwiftAudioProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftAudioProxy.h; sourceTree = "<group>"; };
+		ED069D4F267CBBBB00C4C3EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED069D59267CBC0000C4C3EF /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5BC607EB1D7146AC00D5C97A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED069D53267CBBBB00C4C3EF /* SwiftAudioProxy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED069D49267CBBBB00C4C3EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -61,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				5BC607F01D7146AC00D5C97A /* test */,
+				ED069D4D267CBBBB00C4C3EF /* SwiftAudioProxy */,
 				5BC607EF1D7146AC00D5C97A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				5BC607EE1D7146AC00D5C97A /* BackgroundTask.app */,
+				ED069D4C267CBBBB00C4C3EF /* SwiftAudioProxy.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,7 +128,28 @@
 			path = test;
 			sourceTree = "<group>";
 		};
+		ED069D4D267CBBBB00C4C3EF /* SwiftAudioProxy */ = {
+			isa = PBXGroup;
+			children = (
+				ED069D59267CBC0000C4C3EF /* BackgroundTask.swift */,
+				ED069D4E267CBBBB00C4C3EF /* SwiftAudioProxy.h */,
+				ED069D4F267CBBBB00C4C3EF /* Info.plist */,
+			);
+			path = SwiftAudioProxy;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		ED069D47267CBBBB00C4C3EF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED069D50267CBBBB00C4C3EF /* SwiftAudioProxy.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		5BC607ED1D7146AC00D5C97A /* BackgroundTask */ = {
@@ -96,15 +159,35 @@
 				5BC607EA1D7146AC00D5C97A /* Sources */,
 				5BC607EB1D7146AC00D5C97A /* Frameworks */,
 				5BC607EC1D7146AC00D5C97A /* Resources */,
+				ED069D55267CBBBB00C4C3EF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				ED069D52267CBBBB00C4C3EF /* PBXTargetDependency */,
 			);
 			name = BackgroundTask;
 			productName = test;
 			productReference = 5BC607EE1D7146AC00D5C97A /* BackgroundTask.app */;
 			productType = "com.apple.product-type.application";
+		};
+		ED069D4B267CBBBB00C4C3EF /* SwiftAudioProxy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED069D58267CBBBB00C4C3EF /* Build configuration list for PBXNativeTarget "SwiftAudioProxy" */;
+			buildPhases = (
+				ED069D47267CBBBB00C4C3EF /* Headers */,
+				ED069D48267CBBBB00C4C3EF /* Sources */,
+				ED069D49267CBBBB00C4C3EF /* Frameworks */,
+				ED069D4A267CBBBB00C4C3EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftAudioProxy;
+			productName = SwiftAudioProxy;
+			productReference = ED069D4C267CBBBB00C4C3EF /* SwiftAudioProxy.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -125,6 +208,11 @@
 							};
 						};
 					};
+					ED069D4B267CBBBB00C4C3EF = {
+						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 5BC607E91D7146AC00D5C97A /* Build configuration list for PBXProject "BackgroundTask" */;
@@ -141,6 +229,7 @@
 			projectRoot = "";
 			targets = (
 				5BC607ED1D7146AC00D5C97A /* BackgroundTask */,
+				ED069D4B267CBBBB00C4C3EF /* SwiftAudioProxy */,
 			);
 		};
 /* End PBXProject section */
@@ -157,6 +246,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ED069D4A267CBBBB00C4C3EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -170,7 +266,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ED069D48267CBBBB00C4C3EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED069D5A267CBC0000C4C3EF /* BackgroundTask.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED069D52267CBBBB00C4C3EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED069D4B267CBBBB00C4C3EF /* SwiftAudioProxy */;
+			targetProxy = ED069D51267CBBBB00C4C3EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5BC607F51D7146AC00D5C97A /* Main.storyboard */ = {
@@ -304,6 +416,7 @@
 		5BC608171D7146AC00D5C97A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -321,6 +434,7 @@
 		5BC608181D7146AC00D5C97A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -332,6 +446,82 @@
 				PRODUCT_NAME = BackgroundTask;
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		ED069D56267CBBBB00C4C3EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SwiftAudioProxy/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.ar4.SwiftAudioProxy;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ED069D57267CBBBB00C4C3EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SwiftAudioProxy/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.ar4.SwiftAudioProxy;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -352,6 +542,15 @@
 			buildConfigurations = (
 				5BC608171D7146AC00D5C97A /* Debug */,
 				5BC608181D7146AC00D5C97A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED069D58267CBBBB00C4C3EF /* Build configuration list for PBXNativeTarget "SwiftAudioProxy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED069D56267CBBBB00C4C3EF /* Debug */,
+				ED069D57267CBBBB00C4C3EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
