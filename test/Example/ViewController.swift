@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftAudioProxy;
 
 class ViewController: UIViewController {
     
@@ -15,7 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var stopTaskButton: UIButton!
     
     var timer = Timer()
-    var backgroundTask = BackgroundTask()
+    //var backgroundTask = BackgroundTask()
+    var saproxy = SwiftAudioProxy();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +37,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startBackgroundTask(_ sender: AnyObject) {
-        backgroundTask.startBackgroundTask()
+        // backgroundTask.startBackgroundTask()
+        
+        let bundle = Bundle.main.path(forResource: "blank", ofType: "wav")
+        let alertSound = URL(fileURLWithPath: bundle!)
+        saproxy.startRunningProxy(file: alertSound.path);
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         starTaskButton.alpha = 0.5
@@ -53,7 +59,9 @@ class ViewController: UIViewController {
         
         timer.invalidate()
         
-        backgroundTask.stopBackgroundTask()
+        saproxy.stopRunningProxy();
+        
+        // backgroundTask.stopBackgroundTask()
         
         label.text = ""
     }

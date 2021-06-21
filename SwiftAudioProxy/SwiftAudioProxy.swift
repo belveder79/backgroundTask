@@ -44,11 +44,9 @@ public class SwiftAudioProxy : NSObject {
     fileprivate func proxy(file: String) {
         NSLog("Moving on... with string: " + file);
         do {
-            //let bundle = Bundle.main.path(forResource: file, ofType: "wav")
-            //let alertSound = URL(fileURLWithPath: bundle!)
             let alertSound = URL(fileURLWithPath: file)
             NSLog("Sound is: " + alertSound.absoluteString);
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, options: [.defaultToSpeaker])
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback);//, options: [.defaultToSpeaker])
             try AVAudioSession.sharedInstance().setActive(true)
             NSLog("Init player...");
             try self.player = AVAudioPlayer(contentsOf: alertSound)
