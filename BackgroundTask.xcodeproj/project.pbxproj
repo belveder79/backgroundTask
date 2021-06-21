@@ -15,6 +15,7 @@
 		5BC607FC1D7146AC00D5C97A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC607FA1D7146AC00D5C97A /* LaunchScreen.storyboard */; };
 		ED069D50267CBBBB00C4C3EF /* SwiftAudioProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = ED069D4E267CBBBB00C4C3EF /* SwiftAudioProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED069D5A267CBC0000C4C3EF /* SwiftAudioProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED069D59267CBC0000C4C3EF /* SwiftAudioProxy.swift */; };
+		EDBD638E2680A0FC00B1C0D5 /* double.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDBD638D2680A0FC00B1C0D5 /* double.wav */; };
 		EDFFD25226808DA000552951 /* SwiftAudioProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED069D4C267CBBBB00C4C3EF /* SwiftAudioProxy.framework */; };
 		EDFFD25326808DA000552951 /* SwiftAudioProxy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED069D4C267CBBBB00C4C3EF /* SwiftAudioProxy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		ED069D4E267CBBBB00C4C3EF /* SwiftAudioProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftAudioProxy.h; sourceTree = "<group>"; };
 		ED069D4F267CBBBB00C4C3EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED069D59267CBC0000C4C3EF /* SwiftAudioProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftAudioProxy.swift; sourceTree = "<group>"; };
+		EDBD638D2680A0FC00B1C0D5 /* double.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = double.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		5B0E1C5C20FEABCE003081D2 /* BackgroundTask */ = {
 			isa = PBXGroup;
 			children = (
+				EDBD638D2680A0FC00B1C0D5 /* double.wav */,
 				5B7F21651D71963A00D0A65D /* blank.wav */,
 				5B7F21671D72535400D0A65D /* BackgroundTask.swift */,
 			);
@@ -218,6 +221,7 @@
 					};
 					ED069D4B267CBBBB00C4C3EF = {
 						CreatedOnToolsVersion = 12.5;
+						DevelopmentTeam = 4Y44NLQV57;
 						LastSwiftMigration = 1250;
 						ProvisioningStyle = Automatic;
 					};
@@ -251,6 +255,7 @@
 				5BC607FC1D7146AC00D5C97A /* LaunchScreen.storyboard in Resources */,
 				5BC607F91D7146AC00D5C97A /* Assets.xcassets in Resources */,
 				5BC607F71D7146AC00D5C97A /* Main.storyboard in Resources */,
+				EDBD638E2680A0FC00B1C0D5 /* double.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,12 +471,12 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4Y44NLQV57;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -506,12 +511,12 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4Y44NLQV57;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

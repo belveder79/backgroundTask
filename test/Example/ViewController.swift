@@ -39,11 +39,11 @@ class ViewController: UIViewController {
     @IBAction func startBackgroundTask(_ sender: AnyObject) {
         // backgroundTask.startBackgroundTask()
         
-        let bundle = Bundle.main.path(forResource: "blank", ofType: "wav")
+        let bundle = Bundle.main.path(forResource: "double", ofType: "wav")
         let alertSound = URL(fileURLWithPath: bundle!)
         saproxy.startRunningProxy(file: alertSound.path);
         
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         starTaskButton.alpha = 0.5
         starTaskButton.isEnabled = false
         

@@ -34,9 +34,12 @@ public class SwiftAudioProxy : NSObject {
     fileprivate func interrupted(_ notification: Notification) {
         if notification.name == AVAudioSession.interruptionNotification && notification.userInfo != nil {
             let info = notification.userInfo!
+            
             var intValue = 0
             (info[AVAudioSessionInterruptionTypeKey]! as AnyObject).getValue(&intValue)
-            if intValue == 1 { proxy(file: proxyFile) }
+            NSLog("Interrupted: %d", intValue)
+            if intValue == 0 { proxy(file: proxyFile) }
+            // proxy(file: proxyFile)
         }
     }
     
