@@ -14,14 +14,16 @@ public class SwiftAudioProxy : NSObject {
     var player = AVAudioPlayer()
     var timer = Timer()
     var proxyFile:String = String()
+    var proxyVolume:Float = Float()
     
     // MARK: - Methods
     @objc
-    public func startRunningProxy(file: String) {
+    public func startRunningProxy(file: String, volume: Float) {
         NotificationCenter.default.addObserver(self, selector: #selector(interrupted), name: AVAudioSession.interruptionNotification, object: AVAudioSession.sharedInstance())
         proxyFile = file
+        proxyVolume = volume
         NSLog("Starting playback!");
-        self.proxy(file: proxyFile)
+        self.proxy(file: proxyFile, volume: proxyVolume)
     }
     
     @objc
@@ -38,13 +40,13 @@ public class SwiftAudioProxy : NSObject {
             var intValue = 0
             (info[AVAudioSessionInterruptionTypeKey]! as AnyObject).getValue(&intValue)
             NSLog("Interrupted: %d", intValue)
-            if intValue == 0 { proxy(file: proxyFile) }
+            if intValue == 0 { proxy(file: proxyFile, volume: proxyVolume) }
             // proxy(file: proxyFile)
         }
     }
     
     @objc
-    fileprivate func proxy(file: String) {
+    fileprivate func proxy(file: String, volume: Float) {
         NSLog("Moving on... with string: " + file);
         do {
             let alertSound = URL(fileURLWithPath: file)
@@ -55,7 +57,7 @@ public class SwiftAudioProxy : NSObject {
             try self.player = AVAudioPlayer(contentsOf: alertSound)
             // Play audio forever by setting num of loops to -1
             self.player.numberOfLoops = -1
-            self.player.volume = 0.5
+            self.player.volume = volume
             self.player.prepareToPlay()
             NSLog("Start playing...");
             self.player.play()
